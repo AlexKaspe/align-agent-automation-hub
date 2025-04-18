@@ -19,7 +19,7 @@ const SuccessStoriesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="h-full">
-            <ParallaxSection speed={0.1} className="h-full">
+            <ParallaxSection speed={0.05} className="h-full">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
@@ -45,7 +45,7 @@ const SuccessStoriesSection = () => {
           </div>
 
           <div className="h-full mt-8 md:mt-0">
-            <ParallaxSection speed={0.15} className="h-full">
+            <ParallaxSection speed={0.07} className="h-full">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
@@ -71,7 +71,7 @@ const SuccessStoriesSection = () => {
           </div>
 
           <div className="h-full mt-8 md:mt-0">
-            <ParallaxSection speed={0.2} className="h-full">
+            <ParallaxSection speed={0.09} className="h-full">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
