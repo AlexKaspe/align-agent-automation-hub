@@ -1,124 +1,68 @@
 
-import { Shield, Rocket, LineChart } from 'lucide-react';
+import { Calendar, MessageSquare, RefreshCcw, Users, Bot } from 'lucide-react';
+import ParallaxSection from './ParallaxSection';
 
 const FeatureSection = () => {
+  const features = [
+    {
+      icon: MessageSquare,
+      title: "Instant Lead Response",
+      description: "Never miss a lead with automated instant responses"
+    },
+    {
+      icon: RefreshCcw,
+      title: "Smart CRM Syncing",
+      description: "Automatically update your CRM with lead interactions"
+    },
+    {
+      icon: Users,
+      title: "Automated Client Nurturing",
+      description: "Keep leads warm with personalized follow-ups"
+    },
+    {
+      icon: Calendar,
+      title: "Calendar + Email Automation",
+      description: "Streamline scheduling and communication"
+    },
+    {
+      icon: Bot,
+      title: "AI Chatbots",
+      description: "24/7 inquiry handling and lead qualification"
+    }
+  ];
+
   return (
-    <section id="features" className="py-16 bg-card/30 border-y border-border/20">
+    <section id="features" className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading">
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Superpowers
-            </span>{" "}
-            We Bring to Your Real Estate Biz 🚀
-          </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Our AI solutions are specifically designed for real estate professionals to automate tedious tasks and focus on closing deals.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="bg-card border border-border/50 rounded-xl p-6 hover:shadow-md transition-shadow relative group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 font-heading">AI Lead Qualification</h3>
-              <p className="text-foreground/70 mb-4">
-                Instantly filters serious buyers & sellers from time-wasters, routing quality leads straight to your team.
-              </p>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>24/7 lead scoring and qualification</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Intelligent follow-up scheduling</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Buyer intent prediction</span>
-                </li>
-              </ul>
-            </div>
+        <ParallaxSection speed={0.1}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Real Estate Agents Waste 10+ Hours Weekly on Repetitive Tasks — We Fix That.
+            </h2>
+            <p className="text-lg text-foreground/70">
+              Align Agents AI uses cutting-edge automation to handle your outreach, lead follow-ups, 
+              CRM updates, email campaigns, appointment scheduling, and more. You close deals — we handle the rest.
+            </p>
           </div>
+        </ParallaxSection>
 
-          {/* Feature 2 */}
-          <div className="bg-card border border-border/50 rounded-xl p-6 hover:shadow-md transition-shadow relative group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Rocket className="h-6 w-6 text-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <ParallaxSection key={feature.title} speed={0.15 + (index * 0.05)}>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                <div className="relative bg-card border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-foreground/70">{feature.description}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 font-heading">Workflow Automation</h3>
-              <p className="text-foreground/70 mb-4">
-                Auto-follow-ups, appointment bookings, and status updates that keep your deals moving forward even when you're sleeping.
-              </p>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Automated email & text follow-ups</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Smart appointment scheduling</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Document automation & reminders</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="bg-card border border-border/50 rounded-xl p-6 hover:shadow-md transition-shadow relative group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <LineChart className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 font-heading">Revenue-Boosting Insights</h3>
-              <p className="text-foreground/70 mb-4">
-                Get dashboards showing what works, what doesn't ~ and what to do next to maximize your conversion rates.
-              </p>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Performance analytics & reporting</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Conversion optimization insights</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primary mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Market trend predictions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+            </ParallaxSection>
+          ))}
         </div>
       </div>
     </section>
