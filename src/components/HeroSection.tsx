@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { Button } from './ui/button';
 import { Play, ArrowRight } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
@@ -55,7 +56,7 @@ const HeroSection = () => {
             <ParallaxSection speed={0.4} className="relative">
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-card to-card/50 border border-border/30 shadow-xl animate-fade-in-right">
                 <img 
-                  src="/lovable-uploads/591b505e-0653-419d-ba1c-54983f3d5dd9.png" 
+                  src="/lovable-uploads/fde64724-dbab-4f97-ba74-f9a1388574a6.png" 
                   alt="AI-Powered Real Estate Automation Dashboard" 
                   className="w-full h-full object-cover object-center mix-blend-luminosity opacity-90"
                 />
