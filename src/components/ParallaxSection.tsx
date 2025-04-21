@@ -10,7 +10,7 @@ interface ParallaxProps {
 
 const ParallaxSection = ({ 
   children, 
-  speed = 0.5, 
+  speed = 0.09, // reduced default (was 0.5)
   className = '',
   direction = 'vertical'
 }: ParallaxProps) => {
@@ -19,38 +19,25 @@ const ParallaxSection = ({
   
   useEffect(() => {
     if (!ref.current) return;
-    
-    // Initial position
     const initialScroll = window.scrollY;
-    
     const handleScroll = () => {
       const element = ref.current;
       if (!element) return;
-      
       const rect = element.getBoundingClientRect();
       const elementTop = rect.top;
       const elementBottom = rect.bottom;
       const windowHeight = window.innerHeight;
-      
-      // Check if element is in viewport or near it
       if (elementTop < windowHeight + 300 && elementBottom > -300) {
-        // Calculate scrolled distance relative to the element's position
-        // Apply a reduced speed factor for smoother parallax
+        // Gentle (1/6th of speed requested), much subtler parallax
         const scrollDistance = window.scrollY - initialScroll;
-        // Reduce the speed by a factor of 3 to make it much slower
-        const reducedSpeed = speed / 3;
+        const reducedSpeed = speed / 6; // softer
         const newOffset = -(scrollDistance * reducedSpeed);
-        
-        // Apply the offset with a smoother transition
         setOffset(newOffset);
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Initial calculation
     handleScroll();
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, [speed]);
 
@@ -58,7 +45,7 @@ const ParallaxSection = ({
     <div className={`${className} overflow-hidden relative`}>
       <div 
         ref={ref} 
-        className="will-change-transform transition-transform duration-500 ease-out"
+        className="will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
         style={{ 
           transform: direction === 'vertical' 
             ? `translateY(${offset}px)` 

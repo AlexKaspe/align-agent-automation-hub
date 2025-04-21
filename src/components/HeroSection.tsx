@@ -19,8 +19,8 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left content */}
           <div className="lg:col-span-6 space-y-6">
-            <ParallaxSection speed={0.2} className="space-y-2">
-              <div className="space-y-4 animate-fade-in">
+            <ParallaxSection speed={0.13} className="space-y-2">
+              <div className="space-y-4 animate-fade-in-soft">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Revolutionize Your Real Estate Business with AI-Powered Automation
                 </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
               </div>
             </ParallaxSection>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2 animate-fade-in-soft" style={{ animationDelay: '0.4s' }}>
               <Button 
                 size="lg"
                 className="text-md font-medium px-6 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl" 
@@ -53,8 +53,8 @@ const HeroSection = () => {
 
           {/* Right content */}
           <div className="lg:col-span-6 relative">
-            <ParallaxSection speed={0.4} className="relative">
-              <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-card to-card/50 border border-border/30 shadow-xl animate-fade-in-right">
+            <ParallaxSection speed={0.19} className="relative">
+              <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-card to-card/50 border border-border/30 shadow-xl animate-fade-in-right-soft">
                 <img 
                   src="/lovable-uploads/fde64724-dbab-4f97-ba74-f9a1388574a6.png" 
                   alt="AI-Powered Real Estate Automation Dashboard" 
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 />
                 
                 {/* Floating elements */}
-                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-float">
+                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop">
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>
@@ -73,7 +73,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-float" style={{animationDelay: '1s'}}>
+                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop" style={{animationDelay: '0.3s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
@@ -84,7 +84,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-float" style={{animationDelay: '2s'}}>
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop" style={{animationDelay: '0.5s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>

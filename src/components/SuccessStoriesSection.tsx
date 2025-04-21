@@ -9,18 +9,18 @@ const SuccessStoriesSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading animate-fade-in-soft">
             Real Success Stories
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto animate-fade-in-soft" style={{animationDelay: '0.07s'}}>
             See the impact our AI automation has made for real estate professionals across the country.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="h-full">
-            <ParallaxSection speed={0.05} className="h-full">
-              <div className="relative group">
+            <ParallaxSection speed={0.08} className="h-full">
+              <div className="relative group animate-fade-in-soft">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                   <img
@@ -45,8 +45,8 @@ const SuccessStoriesSection = () => {
           </div>
 
           <div className="h-full mt-8 md:mt-0">
-            <ParallaxSection speed={0.07} className="h-full">
-              <div className="relative group">
+            <ParallaxSection speed={0.1} className="h-full">
+              <div className="relative group animate-fade-in-soft" style={{animationDelay: '0.2s'}}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                   <img
@@ -71,8 +71,8 @@ const SuccessStoriesSection = () => {
           </div>
 
           <div className="h-full mt-8 md:mt-0">
-            <ParallaxSection speed={0.09} className="h-full">
-              <div className="relative group">
+            <ParallaxSection speed={0.12} className="h-full">
+              <div className="relative group animate-fade-in-soft" style={{animationDelay: '0.35s'}}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                   <img
