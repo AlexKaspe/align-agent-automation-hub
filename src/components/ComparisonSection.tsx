@@ -1,6 +1,5 @@
 
 import { Check } from 'lucide-react';
-import ParallaxSection from './ParallaxSection';
 
 const ComparisonSection = () => {
   const features = [
@@ -36,38 +35,34 @@ const ComparisonSection = () => {
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ParallaxSection speed={0.1}>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Top Real Estate Agents Choose Align Agents AI
-            </h2>
-          </div>
-        </ParallaxSection>
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: '0.12s' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Why Top Real Estate Agents Choose Align Agents AI
+          </h2>
+        </div>
 
-        <ParallaxSection speed={0.15}>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-4 p-6 rounded-lg bg-card border border-border/50">
-              <div className="font-semibold">Feature</div>
-              <div className="font-semibold text-center">Manual Workflows</div>
-              <div className="font-semibold text-center">Align Agents AI</div>
-              
-              {features.map((feature, index) => (
-                <>
-                  <div key={`label-${index}`} className="py-4 border-t border-border/30">
-                    {feature.label}
-                  </div>
-                  <div key={`manual-${index}`} className="py-4 border-t border-border/30 text-center text-foreground/70">
-                    {feature.manual}
-                  </div>
-                  <div key={`automated-${index}`} className="py-4 border-t border-border/30 text-center text-primary font-medium flex items-center justify-center gap-2">
-                    <Check className="w-4 h-4" />
-                    {feature.automated}
-                  </div>
-                </>
-              ))}
-            </div>
+        <div className="max-w-4xl mx-auto animate-fade-in-soft" style={{ animationDelay: '0.22s' }}>
+          <div className="grid grid-cols-3 gap-4 p-6 rounded-lg bg-card border border-border/50">
+            <div className="font-semibold">Feature</div>
+            <div className="font-semibold text-center">Manual Workflows</div>
+            <div className="font-semibold text-center">Align Agents AI</div>
+            
+            {features.map((feature, index) => (
+              <React.Fragment key={feature.label}>
+                <div className="py-4 border-t border-border/30">
+                  {feature.label}
+                </div>
+                <div className="py-4 border-t border-border/30 text-center text-foreground/70">
+                  {feature.manual}
+                </div>
+                <div className="py-4 border-t border-border/30 text-center text-primary font-medium flex items-center justify-center gap-2">
+                  <Check className="w-4 h-4" />
+                  {feature.automated}
+                </div>
+              </React.Fragment>
+            ))}
           </div>
-        </ParallaxSection>
+        </div>
       </div>
     </section>
   );
