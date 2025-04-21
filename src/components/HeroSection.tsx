@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from './ui/button';
 import { Play, ArrowRight } from 'lucide-react';
@@ -51,17 +52,17 @@ const HeroSection = () => {
 
           {/* Right content */}
           <div className="lg:col-span-6 relative">
-            {/* Retain float flying tab animations by keeping ParallaxSection for the whole hero image/area */}
+            {/* Parallax section for float/flying tabs and hero image */}
             <ParallaxSection speed={0.19} className="relative">
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-card to-card/50 border border-border/30 shadow-xl animate-fade-in-right-soft">
                 <img 
-                  src="/lovable-uploads/ChatGPT Image Apr 18, 2025, 02_50_51 PM.png" 
+                  src="/lovable-uploads/0f824cc1-d259-45c5-b0b7-aa41b5c015c7.png" 
                   alt="AI-Powered Real Estate Automation Dashboard" 
                   className="w-full h-full object-cover object-center mix-blend-luminosity opacity-90"
                 />
                 
                 {/* Floating elements (flying tabs) */}
-                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop">
+                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float">
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>
@@ -72,7 +73,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop" style={{animationDelay: '0.3s'}}>
+                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.3s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
@@ -83,7 +84,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop" style={{animationDelay: '0.5s'}}>
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.5s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>
