@@ -1,4 +1,3 @@
-
 import { Calendar, MessageSquare, RefreshCcw, Users, Bot } from 'lucide-react';
 
 const FeatureSection = () => {
@@ -32,7 +31,6 @@ const FeatureSection = () => {
 
   return (
     <section id="features" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: '0.1s' }}>
