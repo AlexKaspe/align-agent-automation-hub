@@ -31,18 +31,9 @@ const FeatureSection = () => {
 
   return (
     <section id="features" className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Real Estate Agents Waste 10+ Hours Weekly on Repetitive Tasks — We Fix That.
-          </h2>
-          <p className="text-lg text-foreground/70">
-            Align Agents AI uses cutting-edge automation to handle your outreach, lead follow-ups, 
-            CRM updates, email campaigns, appointment scheduling, and more. You close deals — we handle the rest.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
