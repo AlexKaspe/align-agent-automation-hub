@@ -16,16 +16,18 @@ const ContactSection = () => {
             </p>
           </div>
 
-          {/* Cal.com Iframe Embed */}
+          {/* Cal.com Responsive Iframe Embed */}
           <div className="bg-card border border-border/50 rounded-xl p-6 shadow-md">
-            <iframe  
-              src="https://cal.com/alignagentsai/intro-call?embed=true"  
-              width="100%"  
-              height="700"  
-              style={{ border: "none", overflow: "hidden" }}  
-              scrolling="no"
-              title="Schedule a 30-minute demo call"
-            ></iframe>
+            <div style={{ width: "100%", maxWidth: "100%", overflow: "hidden" }}>
+              <iframe
+                src="https://cal.com/alignagentsai/intro-call?embed=true"
+                width="100%"
+                height="700"
+                style={{ border: "none", overflow: "hidden", pointerEvents: "auto" }}
+                allowFullScreen
+                title="Schedule a 30-minute demo call"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
