@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +52,10 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <Button 
               className="font-medium"
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get Free Demo
+              Book a Call
+              <Calendar className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
@@ -113,10 +114,11 @@ const Navbar = () => {
                 className="w-full font-medium"
                 onClick={() => {
                   setIsMenuOpen(false);
-                  window.location.href = '/contact';
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get Free Demo
+                Book a Call
+                <Calendar className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>

@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from './ui/button';
-import { Play, ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
 
 const HeroSection = () => {
@@ -33,19 +32,10 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 className="text-md font-medium px-6 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl" 
-                onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get My Free AI Audit
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-md font-medium px-6 py-6 border-primary/20 hover:border-primary/40 transition-all duration-300" 
-                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Watch Demo
-                <Play className="ml-2 h-4 w-4" />
+                Book a Call
+                <Calendar className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
