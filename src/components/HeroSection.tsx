@@ -28,14 +28,14 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2 animate-fade-in" style={{ animationDelay: '0.18s' }}>
+            <div className="flex flex-col items-center sm:items-start gap-4 pt-6 animate-fade-in" style={{ animationDelay: '0.18s' }}>
               <Button 
                 size="lg"
-                className="text-md font-medium px-6 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl" 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-md font-medium px-8 py-8 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl" 
+                onClick={() => window.open('https://cal.com/alignagentsai/intro-call', '_blank')}
               >
                 Book a Call
-                <Calendar className="ml-2 h-4 w-4" />
+                <Calendar className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>

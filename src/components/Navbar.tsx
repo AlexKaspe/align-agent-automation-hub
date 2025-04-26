@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <Button 
               className="font-medium"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('https://cal.com/alignagentsai/intro-call', '_blank')}
             >
               Book a Call
               <Calendar className="ml-2 h-4 w-4" />
@@ -114,7 +114,7 @@ const Navbar = () => {
                 className="w-full font-medium"
                 onClick={() => {
                   setIsMenuOpen(false);
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  window.open('https://cal.com/alignagentsai/intro-call', '_blank');
                 }}
               >
                 Book a Call
