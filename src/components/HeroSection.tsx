@@ -1,9 +1,14 @@
+
 import React from 'react';
 import { Button } from './ui/button';
 import { Calendar } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
 
 const HeroSection = () => {
+  const handleBookCall = () => {
+    window.open('https://cal.com/alignagentsai/intro-call', '_blank');
+  };
+
   return (
     <section className="relative pt-20 pb-10 md:pt-24 md:pb-14 lg:pt-28 lg:pb-20 overflow-hidden">
       {/* Background elements */}
@@ -31,11 +36,14 @@ const HeroSection = () => {
             <div className="flex flex-col items-center sm:items-start gap-4 pt-6 animate-fade-in" style={{ animationDelay: '0.18s' }}>
               <Button 
                 size="lg"
-                className="text-md font-medium px-8 py-8 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl" 
-                onClick={() => window.open('https://cal.com/alignagentsai/intro-call', '_blank')}
+                className="text-md font-medium px-8 py-6 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                onClick={handleBookCall}
+                aria-label="Book a Call"
               >
-                Book a Call
-                <Calendar className="ml-2 h-5 w-5" />
+                <span className="flex items-center justify-center w-full">
+                  Book a Call
+                  <Calendar className="ml-2 h-5 w-5" />
+                </span>
               </Button>
             </div>
           </div>

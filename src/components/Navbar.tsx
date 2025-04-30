@@ -7,6 +7,10 @@ import { Menu, X, Calendar } from 'lucide-react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleBookCall = () => {
+    window.open('https://cal.com/alignagentsai/intro-call', '_blank');
+  };
+
   return (
     <header className="fixed w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,10 +56,13 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <Button 
               className="font-medium"
-              onClick={() => window.open('https://cal.com/alignagentsai/intro-call', '_blank')}
+              onClick={handleBookCall}
+              aria-label="Book a Call"
             >
-              Book a Call
-              <Calendar className="ml-2 h-4 w-4" />
+              <span className="flex items-center">
+                Book a Call
+                <Calendar className="ml-2 h-4 w-4" />
+              </span>
             </Button>
           </div>
 
@@ -114,11 +121,14 @@ const Navbar = () => {
                 className="w-full font-medium"
                 onClick={() => {
                   setIsMenuOpen(false);
-                  window.open('https://cal.com/alignagentsai/intro-call', '_blank');
+                  handleBookCall();
                 }}
+                aria-label="Book a Call"
               >
-                Book a Call
-                <Calendar className="ml-2 h-4 w-4" />
+                <span className="flex items-center justify-center w-full">
+                  Book a Call
+                  <Calendar className="ml-2 h-4 w-4" />
+                </span>
               </Button>
             </div>
           </div>
