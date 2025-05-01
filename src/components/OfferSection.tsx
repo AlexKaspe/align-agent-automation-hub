@@ -67,30 +67,30 @@ const OfferSection = () => {
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold mb-1">What You'll Get</h3>
                     <p className="text-sm text-foreground/60">
-                      Value: <span className="line-through">$1,997</span> <span className="text-primary font-semibold">FREE</span>
+                      Value: <span className="line-through">$2,997</span> <span className="text-primary font-semibold">FREE</span>
                     </p>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-center justify-between pb-3 border-b border-border/30">
                       <span className="text-sm">AI Lead Qualification Setup</span>
-                      <span className="text-primary font-medium">$497 value</span>
+                      <span className="text-primary font-medium">$499 value</span>
                     </div>
                     <div className="flex items-center justify-between pb-3 border-b border-border/30">
                       <span className="text-sm">Email Auto-Responder Suite</span>
-                      <span className="text-primary font-medium">$397 value</span>
+                      <span className="text-primary font-medium">$499 value</span>
                     </div>
                     <div className="flex items-center justify-between pb-3 border-b border-border/30">
                       <span className="text-sm">CRM Integration & Sync</span>
-                      <span className="text-primary font-medium">$297 value</span>
+                      <span className="text-primary font-medium">$999 value</span>
                     </div>
                     <div className="flex items-center justify-between pb-3 border-b border-border/30">
                       <span className="text-sm">Custom Reporting Dashboard</span>
-                      <span className="text-primary font-medium">$397 value</span>
+                      <span className="text-primary font-medium">$499 value</span>
                     </div>
                     <div className="flex items-center justify-between pb-3 border-b border-border/30">
                       <span className="text-sm">Strategy & Training Call</span>
-                      <span className="text-primary font-medium">$397 value</span>
+                      <span className="text-primary font-medium">$499 value</span>
                     </div>
                   </div>
                   
