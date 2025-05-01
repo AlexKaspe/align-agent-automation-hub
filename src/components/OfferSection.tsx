@@ -1,10 +1,9 @@
-
 import { Button } from './ui/button';
 import { Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const OfferSection = () => {
   return (
-    <section id="offer" className="py-16 bg-card relative overflow-hidden">
+    <section id="offer" className="py-16 bg-muted/50 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
