@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,37 +7,32 @@
 
 @layer base {
   :root {
-    /* Dark header/hero background */
-    --hero-background: 220 26% 14%;
-    --hero-foreground: 0 0% 98%;
-    
-    /* Light background for content sections */
-    --background: 0 0% 100%; /* White background */
-    --foreground: 240 10% 3.9%; /* Dark text for readability */
+    --background: 220 26% 14%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 215 30% 22%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 220 26% 14%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 41 100% 50%;
     --primary-foreground: 220 26% 14%;
 
     --secondary: 226 100% 96%;
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary-foreground: 220 26% 14%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 215 30% 22%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 10% 3.9%;
+    --accent: 215 30% 22%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
     --ring: 41 100% 50%;
 
     --radius: 0.5rem;
@@ -107,9 +102,4 @@
   html {
     scroll-behavior: smooth;
   }
-}
-
-/* Custom class for dark hero section */
-.hero-section {
-  @apply bg-[hsl(var(--hero-background))] text-[hsl(var(--hero-foreground))];
 }

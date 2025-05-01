@@ -37,7 +37,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden bg-background text-foreground">
+    <section id="services" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
