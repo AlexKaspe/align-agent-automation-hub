@@ -1,6 +1,7 @@
 
 import { Button } from './ui/button';
 import { Clock, CheckCircle, ArrowRight } from 'lucide-react';
+import { Card, CardContent } from './ui/card';
 
 const OfferSection = () => {
   return (
@@ -12,94 +13,121 @@ const OfferSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="bg-background border border-border/50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-            <div className="md:w-3/5">
+          <div className="flex flex-col gap-8">
+            <div className="text-center">
               <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6">
                 <Clock className="mr-1 h-3 w-3" />
-                Limited-Time Offer
+                AI Automation for Real Estate
               </div>
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading">
-                30 Days Free + Done-For-You Setup
+                Supercharge your lead management with done-for-you AI systems
               </h2>
               
-              <p className="text-foreground/80 mb-6">
-                Get your first 5 workflows set up by our team. No tech skills needed. No strings attached.
+              <p className="text-foreground/80 max-w-2xl mx-auto mb-8">
+                Built specifically for real estate teams who want to save time, generate more leads, and close more deals.
               </p>
-              
-              <p className="text-sm text-primary font-semibold mb-6">
-                *Only 11 spots left this month. Don't miss out
-              </p>
-              
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary mr-2 shrink-0" />
-                  <span>Complete setup of 5 custom automation workflows</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+              <div className="md:w-3/5">
+                <h3 className="text-xl font-bold mb-6">🧠 What's Included in the Full Automation Suite</h3>
+                
+                <div className="space-y-5 mb-8">
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block">AI Lead Qualification Setup</span>
+                      <span className="text-sm text-foreground/70">Smart scoring & routing system that prioritizes high-converting leads</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block">Email Auto-Responder Suite</span>
+                      <span className="text-sm text-foreground/70">Automated AI email follow-ups that respond instantly and nurture over time</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block">CRM Integration & Sync</span>
+                      <span className="text-sm text-foreground/70">Seamless connection with your CRM for automated syncing & workflows</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block">Custom Reporting Dashboard</span>
+                      <span className="text-sm text-foreground/70">Real-time KPI dashboards to track leads, agents, and conversion performance</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block">Strategy & Training Call</span>
+                      <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary mr-2 shrink-0" />
-                  <span>Integration with your existing CRM & tools</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary mr-2 shrink-0" />
-                  <span>30 days unlimited access to all premium features</span>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-primary mr-2 shrink-0" />
-                  <span>1-on-1 strategy call with our automation experts</span>
+                
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-8">
+                  <div className="flex flex-wrap gap-4 justify-between items-center">
+                    <div>
+                      <p className="font-medium mb-1">Total Value: <span className="line-through text-foreground/60">$5,750</span></p>
+                      <p className="text-lg font-bold">Your Price: <span className="text-primary">$4,500</span> — Save $1,250 when bundled</p>
+                    </div>
+                    <Button 
+                      size="lg" 
+                      className="font-medium"
+                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                      Book Discovery Call
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
               </div>
               
-              <Button 
-                size="lg" 
-                className="font-medium w-full sm:w-auto"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Claim Your Free Setup
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            
-            <div className="md:w-2/5">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-70 blur-xl"></div>
-                <div className="relative bg-card border border-border/50 rounded-xl p-6 shadow-lg">
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold mb-1">What You'll Get</h3>
-                    <p className="text-sm text-foreground/60">
-                      Value: <span className="line-through">$2,997</span> <span className="text-primary font-semibold">FREE</span>
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                      <span className="text-sm">AI Lead Qualification Setup</span>
-                      <span className="text-primary font-medium">$499 value</span>
+              <div className="md:w-2/5">
+                <Card className="shadow-lg border border-border/50">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-bold mb-4">✨ Optional Add-Ons</h3>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                        <span>AI SMS Responder Integration</span>
+                        <span className="text-primary font-medium">$700</span>
+                      </div>
+                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                        <span>Chatbot Setup for Real Estate Website</span>
+                        <span className="text-primary font-medium">$900</span>
+                      </div>
+                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                        <span>Monthly Performance Review & Reporting</span>
+                        <span className="text-primary font-medium">$350/month</span>
+                      </div>
+                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                        <span>Lead Source Analytics Setup</span>
+                        <span className="text-primary font-medium">$600</span>
+                      </div>
                     </div>
-                    <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                      <span className="text-sm">Email Auto-Responder Suite</span>
-                      <span className="text-primary font-medium">$499 value</span>
+                    
+                    <div className="mt-6">
+                      <h4 className="font-bold text-lg mb-2">🎯 Ready to Automate Your Real Estate Business?</h4>
+                      <p className="text-sm text-foreground/70 mb-4">
+                        Book a free discovery call and we'll show you how AI can save time and close more deals — without adding extra work.
+                      </p>
+                      <Button 
+                        className="w-full"
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      >
+                        Book Free Discovery Call
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
                     </div>
-                    <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                      <span className="text-sm">CRM Integration & Sync</span>
-                      <span className="text-primary font-medium">$999 value</span>
-                    </div>
-                    <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                      <span className="text-sm">Custom Reporting Dashboard</span>
-                      <span className="text-primary font-medium">$499 value</span>
-                    </div>
-                    <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                      <span className="text-sm">Strategy & Training Call</span>
-                      <span className="text-primary font-medium">$499 value</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-4 pt-2">
-                    <p className="text-xs text-foreground/60 italic text-center">
-                      No credit card required. Zero obligation to continue after 30 days.
-                    </p>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
