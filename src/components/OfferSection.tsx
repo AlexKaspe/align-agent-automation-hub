@@ -4,6 +4,10 @@ import { Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 const OfferSection = () => {
+  const handleBookCall = () => {
+    window.open('https://cal.com/alignagentsai/intro-call', '_blank');
+  };
+
   return (
     <section id="offer" className="py-16 bg-card relative overflow-hidden">
       {/* Background effects */}
@@ -31,7 +35,7 @@ const OfferSection = () => {
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12">
               <div className="md:w-3/5">
-                <h3 className="text-xl font-bold mb-6">🧠 What's Included in the Full Automation Suite</h3>
+                <h3 className="text-xl font-bold mb-6">What's Included in the Full Automation Suite</h3>
                 
                 <div className="space-y-5 mb-8">
                   <div className="flex items-start">
@@ -80,7 +84,7 @@ const OfferSection = () => {
                     <Button 
                       size="lg" 
                       className="font-medium"
-                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      onClick={handleBookCall}
                     >
                       Book Discovery Call
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -92,7 +96,7 @@ const OfferSection = () => {
               <div className="md:w-2/5">
                 <Card className="shadow-lg border border-border/50">
                   <CardContent className="pt-6">
-                    <h3 className="text-xl font-bold mb-4">✨ Optional Add-Ons</h3>
+                    <h3 className="text-xl font-bold mb-4">Optional Add-Ons</h3>
                     
                     <div className="space-y-4 mb-6">
                       <div className="flex items-center justify-between pb-3 border-b border-border/30">
@@ -104,23 +108,23 @@ const OfferSection = () => {
                         <span className="text-primary font-medium">$900</span>
                       </div>
                       <div className="flex items-center justify-between pb-3 border-b border-border/30">
-                        <span>Monthly Performance Review & Reporting</span>
-                        <span className="text-primary font-medium">$350/month</span>
-                      </div>
-                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
                         <span>Lead Source Analytics Setup</span>
                         <span className="text-primary font-medium">$600</span>
+                      </div>
+                      <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                        <span>Monthly Performance Review & Reporting</span>
+                        <span className="text-primary font-medium">$350/month</span>
                       </div>
                     </div>
                     
                     <div className="mt-6">
-                      <h4 className="font-bold text-lg mb-2">🎯 Ready to Automate Your Real Estate Business?</h4>
+                      <h4 className="font-bold text-lg mb-2">Ready to Automate Your Real Estate Business?</h4>
                       <p className="text-sm text-foreground/70 mb-4">
                         Book a free discovery call and we'll show you how AI can save time and close more deals — without adding extra work.
                       </p>
                       <Button 
                         className="w-full"
-                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={handleBookCall}
                       >
                         Book Free Discovery Call
                         <ArrowRight className="ml-2 h-4 w-4" />
