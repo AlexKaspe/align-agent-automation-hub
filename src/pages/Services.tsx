@@ -1,7 +1,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Calendar, Link, Check, Mail } from "lucide-react";
+import { Calendar, Link, Check, Mail, BarChart3, Bot } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const Services = () => {
@@ -30,6 +30,11 @@ const Services = () => {
       title: "Client Nurturing Campaigns",
       description: "For cold leads, we send timely reminders and soft nudges until they're ready to buy/sell.",
       icon: Mail,
+    },
+    {
+      title: "Performance Analytics Dashboard",
+      description: "Real-time tracking of lead quality, response rates, and conversion metrics across all channels.",
+      icon: BarChart3,
     }
   ];
 
