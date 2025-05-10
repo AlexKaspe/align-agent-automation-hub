@@ -5,8 +5,9 @@ import { Calendar } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
 
 const HeroSection = () => {
-  const handleBookCall = () => {
-    window.open('https://cal.com/alignagentsai/intro-call', '_blank');
+  const handleBookCall = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    window.open('https://cal.com/alignagentsai/intro-call', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -38,6 +39,7 @@ const HeroSection = () => {
                 size="lg"
                 className="text-md font-medium px-8 py-6 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
                 onClick={handleBookCall}
+                role="link"
                 aria-label="Book a Call"
               >
                 <span className="flex items-center justify-center w-full">
@@ -89,6 +91,18 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">AI Follow-ups</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* New 4th Floating Tab */}
+                <div className="absolute top-20 right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.7s'}}>
+                  <div className="flex items-center gap-2">
+                    <div className="bg-secondary/20 p-2 rounded-full">
+                      <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Performance Analytics</p>
                     </div>
                   </div>
                 </div>
