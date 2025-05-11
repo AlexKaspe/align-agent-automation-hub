@@ -7,7 +7,12 @@ import ParallaxSection from './ParallaxSection';
 const HeroSection = () => {
   const handleBookCall = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    window.open('https://cal.com/alignagentsai/intro-call', '_blank', 'noopener,noreferrer');
+    // Use a more reliable approach for opening links
+    const win = window.open('https://cal.com/alignagentsai/intro-call', '_blank', 'noopener,noreferrer');
+    // Ensure the window was successfully opened
+    if (win) {
+      win.focus();
+    }
   };
 
   return (
@@ -41,6 +46,7 @@ const HeroSection = () => {
                 onClick={handleBookCall}
                 role="link"
                 aria-label="Book a Call"
+                type="button" // Explicitly set button type
               >
                 <span className="flex items-center justify-center w-full">
                   Book a Call
@@ -95,8 +101,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                {/* New 4th Floating Tab */}
-                <div className="absolute top-20 right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.7s'}}>
+                {/* Moved Performance Analytics tab to bottom left */}
+                <div className="absolute bottom-10 left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.7s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
