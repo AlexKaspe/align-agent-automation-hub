@@ -22,7 +22,7 @@ const SuccessStoriesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=800&auto=format&fit=crop"
                   alt="Miami Real Estate Success"
                   className="w-full h-48 object-cover rounded-lg mb-6"
                 />
@@ -46,7 +46,7 @@ const SuccessStoriesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?q=80&w=800&auto=format&fit=crop"
                   alt="NYC Real Estate Success"
                   className="w-full h-48 object-cover rounded-lg mb-6"
                 />
@@ -70,7 +70,7 @@ const SuccessStoriesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=800&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?q=80&w=800&auto=format&fit=crop"
                   alt="LA Real Estate Success"
                   className="w-full h-48 object-cover rounded-lg mb-6"
                 />

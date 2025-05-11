@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-16 w-16 rounded-full overflow-hidden bg-primary/20 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
                   alt="Jessica P." 
                   className="h-full w-full object-cover"
                 />
@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-16 w-16 rounded-full overflow-hidden bg-primary/20 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?q=80&w=150&auto=format&fit=crop"
                   alt="David T." 
                   className="h-full w-full object-cover"
                 />
@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-16 w-16 rounded-full overflow-hidden bg-primary/20 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=150&auto=format&fit=crop"
                   alt="Sarah L." 
                   className="h-full w-full object-cover"
                 />
@@ -129,7 +129,7 @@ const TestimonialsSection = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-16 w-16 rounded-full overflow-hidden bg-primary/20 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=150&auto=format&fit=crop"
                   alt="Michael R." 
                   className="h-full w-full object-cover"
                 />
