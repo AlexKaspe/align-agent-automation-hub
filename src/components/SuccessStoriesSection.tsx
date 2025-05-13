@@ -46,7 +46,7 @@ const SuccessStoriesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl -z-10 blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="bg-card border border-border/50 rounded-2xl p-6 h-full hover:shadow-xl transition-shadow duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?q=80&w=800&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?q=80&w=800&auto=format&fit=crop"
                   alt="NYC Real Estate Success"
                   className="w-full h-48 object-cover rounded-lg mb-6"
                 />
