@@ -49,38 +49,32 @@ const Index = () => {
     {
       title: "Lead Qualification & Response Automation",
       description: "Automate how you respond to new leads with AI that answers questions, books calls, and gathers key info.",
-      icon: Check,
-      price: "$1,200"
+      icon: Check
     },
     {
       title: "AI Appointment Scheduling",
       description: "Never miss a meeting. Our AI links to your calendar and schedules with leads in real-time.",
-      icon: Calendar,
-      price: "$950"
+      icon: Calendar
     },
     {
       title: "CRM Integration + Data Sync",
       description: "We connect your tools like Follow Up Boss, HubSpot, Salesforce, etc. so everything stays up to date.",
-      icon: Link,
-      price: "$1,100"
+      icon: Link
     },
     {
       title: "Follow-Up Email & SMS Automation",
       description: "Personalized message flows triggered by lead behavior, written by AI, optimized for conversion.",
-      icon: Mail,
-      price: "$950"
+      icon: Mail
     },
     {
       title: "Performance Analytics Dashboard",
       description: "Real-time tracking of lead quality, response rates, and conversion metrics across all channels.",
-      icon: BarChart3,
-      price: "$1,000"
+      icon: BarChart3
     },
     {
       title: "Strategy & Training Call",
       description: "Personalized training session + playbook to get your team onboarded fast.",
-      icon: Bot,
-      price: "$500"
+      icon: Bot
     }
   ];
 
@@ -106,9 +100,8 @@ const Index = () => {
                 <Card key={index} className="border border-border/50">
                   <CardHeader>
                     <service.icon className="h-8 w-8 text-primary mb-4" />
-                    <CardTitle className="flex justify-between items-center">
-                      <span>{service.title}</span>
-                      <span className="text-primary">{service.price}</span>
+                    <CardTitle>
+                      {service.title}
                     </CardTitle>
                     <CardDescription>{service.description}</CardDescription>
                   </CardHeader>
@@ -124,9 +117,11 @@ const Index = () => {
           </div>
         </section>
         
+        {/* Comparison Section - Moved above ServicesSection */}
+        <ComparisonSection />
+        
         <ServicesSection />
         <FeatureSection />
-        <ComparisonSection />
         
         {/* Pricing Section from Pricing.tsx */}
         <section id="pricing" className="py-16 bg-background relative overflow-hidden">
