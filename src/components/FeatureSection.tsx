@@ -1,5 +1,5 @@
 
-import { Calendar, MessageSquare, RefreshCcw, Users, Bot } from 'lucide-react';
+import { Calendar, MessageSquare, RefreshCcw, Users, Bot, Award } from 'lucide-react';
 
 const FeatureSection = () => {
   const features = [
@@ -27,6 +27,11 @@ const FeatureSection = () => {
       icon: Bot,
       title: "AI Chatbots",
       description: "24/7 inquiry handling and lead qualification"
+    },
+    {
+      icon: Award,
+      title: "Performance Analytics",
+      description: "Track ROI and conversion metrics in real-time"
     }
   ];
 
