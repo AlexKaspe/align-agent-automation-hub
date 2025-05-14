@@ -1,3 +1,4 @@
+
 import { Calendar, MessageSquare, RefreshCcw, Users, Bot } from 'lucide-react';
 
 const FeatureSection = () => {
@@ -34,6 +35,13 @@ const FeatureSection = () => {
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Key Features That Drive Results</h2>
+          <p className="text-lg text-foreground/70">
+            Our comprehensive suite of AI-powered tools designed specifically for real estate professionals
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 

@@ -83,7 +83,7 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        {/* Services Section from Services.tsx */}
+        {/* Services Section */}
         <section id="services" className="py-16 pt-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
@@ -119,7 +119,7 @@ const Index = () => {
         {/* Comparison Section */}
         <ComparisonSection />
         
-        {/* Pricing Section - Moved below ComparisonSection */}
+        {/* Pricing Section */}
         <section id="pricing" className="py-16 bg-background relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
@@ -205,11 +205,10 @@ const Index = () => {
         </section>
         
         <ServicesSection />
-        <FeatureSection />
         
         <TestimonialsSection />
         
-        {/* Case Studies Section from CaseStudies.tsx */}
+        {/* Case Studies Section */}
         <section id="case-studies" className="py-16 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
@@ -247,6 +246,9 @@ const Index = () => {
         </section>
         
         <SuccessStoriesSection />
+        
+        {/* Now FeatureSection is placed here, after SuccessStoriesSection */}
+        <FeatureSection />
         
         {/* Contact Section */}
         <ContactSection />
