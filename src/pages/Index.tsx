@@ -5,12 +5,11 @@ import ServicesSection from "@/components/ServicesSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SuccessStoriesSection from "@/components/SuccessStoriesSection";
-import OfferSection from "@/components/OfferSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Link, Check, Mail, BarChart3, Bot } from "lucide-react";
+import { Calendar, Link, Check, Mail, BarChart3, Bot, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import FeatureSection from "@/components/FeatureSection";
 
 const Index = () => {
@@ -117,13 +116,10 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Comparison Section - Moved above ServicesSection */}
+        {/* Comparison Section */}
         <ComparisonSection />
         
-        <ServicesSection />
-        <FeatureSection />
-        
-        {/* Pricing Section from Pricing.tsx */}
+        {/* Pricing Section - Moved below ComparisonSection */}
         <section id="pricing" className="py-16 bg-background relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
@@ -135,7 +131,7 @@ const Index = () => {
               <div className="flex flex-col gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6">
-                    <Calendar className="mr-1 h-3 w-3" />
+                    <Clock className="mr-1 h-3 w-3" />
                     AI Automation for Real Estate
                   </div>
                   
@@ -153,35 +149,35 @@ const Index = () => {
                   
                   <div className="grid md:grid-cols-2 gap-5 mb-8">
                     <div className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold block">AI Lead Qualification Setup <span className="text-primary ml-1">$1,200</span></span>
                         <span className="text-sm text-foreground/70">Smart scoring & routing system that prioritizes high-converting leads</span>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold block">Email Auto-Responder Suite <span className="text-primary ml-1">$950</span></span>
                         <span className="text-sm text-foreground/70">Automated AI email follow-ups that respond instantly and nurture over time</span>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold block">CRM Integration & Sync <span className="text-primary ml-1">$1,100</span></span>
                         <span className="text-sm text-foreground/70">Seamless connection with your CRM for automated syncing & workflows</span>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold block">Custom Reporting Dashboard <span className="text-primary ml-1">$1,000</span></span>
                         <span className="text-sm text-foreground/70">Real-time KPI dashboards to track leads, agents, and conversion performance</span>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                       <div>
                         <span className="font-semibold block">Strategy & Training Call <span className="text-primary ml-1">$500</span></span>
                         <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
@@ -197,6 +193,7 @@ const Index = () => {
                           onClick={handleBookCall}
                         >
                           Book Discovery Call
+                          <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </div>
                     </div>
@@ -206,6 +203,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <ServicesSection />
+        <FeatureSection />
         
         <TestimonialsSection />
         
@@ -247,7 +247,6 @@ const Index = () => {
         </section>
         
         <SuccessStoriesSection />
-        <OfferSection />
         
         {/* Contact Section */}
         <ContactSection />
