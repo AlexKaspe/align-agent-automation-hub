@@ -1,5 +1,5 @@
 
-import { Calendar, MessageSquare, RefreshCcw, Users, Bot, ArrowDownUp } from 'lucide-react';
+import { Calendar, MessageSquare, RefreshCcw, Users, Bot } from 'lucide-react';
 
 const FeatureSection = () => {
   const features = [
@@ -27,21 +27,16 @@ const FeatureSection = () => {
       icon: Bot,
       title: "AI Chatbots",
       description: "24/7 inquiry handling and lead qualification"
-    },
-    {
-      icon: ArrowDownUp,
-      title: "Lead Prioritization",
-      description: "Automatically score and prioritize high-value leads"
     }
   ];
 
   return (
-    <section id="features" className="py-20 pt-24 relative overflow-hidden">
+    <section id="features" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Real Estate AI Automation Services That Actually Work</h2>
+          <h2 className="text-3xl font-bold mb-4">Key Features That Drive Results</h2>
           <p className="text-lg text-foreground/70">
             Our comprehensive suite of AI-powered tools designed specifically for real estate professionals
           </p>
