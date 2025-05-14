@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Pricing = () => {
   const handleBookCall = () => {
@@ -37,60 +38,57 @@ const Pricing = () => {
                   </p>
                 </div>
 
-                <div className="space-y-8">
-                  <h3 className="text-xl font-bold">What's Included in the Full Automation Suite</h3>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold block">AI Lead Qualification Setup</span>
-                        <span className="text-sm text-foreground/70">Smart scoring & routing system that prioritizes high-converting leads</span>
-                        <span className="block text-primary font-medium mt-1">Standalone: $1,200</span>
+                <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                  <div className="md:w-3/5">
+                    <h3 className="text-xl font-bold mb-6">What's Included in the Full Automation Suite</h3>
+                    
+                    <div className="space-y-5 mb-8">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold block">AI Lead Qualification Setup</span>
+                          <span className="text-sm text-foreground/70">Smart scoring & routing system that prioritizes high-converting leads</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold block">Email Auto-Responder Suite</span>
-                        <span className="text-sm text-foreground/70">Automated AI email follow-ups that respond instantly and nurture over time</span>
-                        <span className="block text-primary font-medium mt-1">Standalone: $950</span>
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold block">Email Auto-Responder Suite</span>
+                          <span className="text-sm text-foreground/70">Automated AI email follow-ups that respond instantly and nurture over time</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold block">CRM Integration & Sync</span>
-                        <span className="text-sm text-foreground/70">Seamless connection with your CRM for automated syncing & workflows</span>
-                        <span className="block text-primary font-medium mt-1">Standalone: $1,100</span>
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold block">CRM Integration & Sync</span>
+                          <span className="text-sm text-foreground/70">Seamless connection with your CRM for automated syncing & workflows</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold block">Custom Reporting Dashboard</span>
-                        <span className="text-sm text-foreground/70">Real-time KPI dashboards to track leads, agents, and conversion performance</span>
-                        <span className="block text-primary font-medium mt-1">Standalone: $1,000</span>
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold block">Custom Reporting Dashboard</span>
+                          <span className="text-sm text-foreground/70">Real-time KPI dashboards to track leads, agents, and conversion performance</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold block">Strategy & Training Call</span>
-                        <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
-                        <span className="block text-primary font-medium mt-1">Standalone: $500</span>
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold block">Strategy & Training Call</span>
+                          <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
+                        </div>
                       </div>
                     </div>
                     
-                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
-                      <div className="flex flex-col gap-4">
+                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-8">
+                      <div className="flex flex-wrap gap-4 justify-between items-center">
                         <div>
-                          <p className="font-medium mb-1">Total Value if Purchased Separately: <span className="text-foreground/90 font-bold">$5,750</span></p>
-                          <p className="text-lg font-bold">Bundle Price: <span className="text-primary">$4,500</span> — Save $1,250 (22% off)</p>
+                          <p className="font-medium mb-1">Total Value: <span className="line-through text-foreground/60">$5,750</span></p>
+                          <p className="text-lg font-bold">Your Price: <span className="text-primary">$4,500</span> — Save $1,250 when bundled</p>
                         </div>
                         <Button 
                           size="lg" 
-                          className="font-medium w-full"
+                          className="font-medium"
                           onClick={handleBookCall}
                         >
                           Book Discovery Call
@@ -98,6 +96,47 @@ const Pricing = () => {
                         </Button>
                       </div>
                     </div>
+                  </div>
+                  
+                  <div className="md:w-2/5">
+                    <Card className="shadow-lg border border-border/50">
+                      <CardContent className="pt-6">
+                        <h3 className="text-xl font-bold mb-4">Optional Add-Ons</h3>
+                        
+                        <div className="space-y-4 mb-6">
+                          <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                            <span>AI SMS Responder Integration</span>
+                            <span className="text-primary font-medium">$700</span>
+                          </div>
+                          <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                            <span>Chatbot Setup for Real Estate Website</span>
+                            <span className="text-primary font-medium">$900</span>
+                          </div>
+                          <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                            <span>Lead Source Analytics Setup</span>
+                            <span className="text-primary font-medium">$600</span>
+                          </div>
+                          <div className="flex items-center justify-between pb-3 border-b border-border/30">
+                            <span>Monthly Performance Review & Reporting</span>
+                            <span className="text-primary font-medium">$350/month</span>
+                          </div>
+                        </div>
+                        
+                        <div className="mt-6">
+                          <h4 className="font-bold text-lg mb-2">Ready to Automate Your Real Estate Business?</h4>
+                          <p className="text-sm text-foreground/70 mb-4">
+                            Book a free discovery call and we'll show you how AI can save time and close more deals — without adding extra work.
+                          </p>
+                          <Button 
+                            className="w-full"
+                            onClick={handleBookCall}
+                          >
+                            Book Free Discovery Call
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
               </div>
