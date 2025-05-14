@@ -1,7 +1,6 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SuccessStoriesSection from "@/components/SuccessStoriesSection";
@@ -204,7 +203,8 @@ const Index = () => {
           </div>
         </section>
         
-        <ServicesSection />
+        {/* Feature Section */}
+        <FeatureSection />
         
         <TestimonialsSection />
         
@@ -246,9 +246,6 @@ const Index = () => {
         </section>
         
         <SuccessStoriesSection />
-        
-        {/* Now FeatureSection is placed here, after SuccessStoriesSection */}
-        <FeatureSection />
         
         {/* Contact Section */}
         <ContactSection />
