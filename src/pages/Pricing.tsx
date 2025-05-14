@@ -81,22 +81,22 @@ const Pricing = () => {
                         <span className="block text-primary font-medium mt-1">Standalone: $500</span>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mt-8">
-                    <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-between items-center">
-                      <div>
-                        <p className="font-medium mb-1">Total Value if Purchased Separately: <span className="text-foreground/90 font-bold">$5,750</span></p>
-                        <p className="text-lg font-bold">Bundle Price: <span className="text-primary">$4,500</span> — Save $1,250 (22% off)</p>
+                    
+                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
+                      <div className="flex flex-col gap-4">
+                        <div>
+                          <p className="font-medium mb-1">Total Value if Purchased Separately: <span className="text-foreground/90 font-bold">$5,750</span></p>
+                          <p className="text-lg font-bold">Bundle Price: <span className="text-primary">$4,500</span> — Save $1,250 (22% off)</p>
+                        </div>
+                        <Button 
+                          size="lg" 
+                          className="font-medium w-full"
+                          onClick={handleBookCall}
+                        >
+                          Book Discovery Call
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
                       </div>
-                      <Button 
-                        size="lg" 
-                        className="font-medium w-full md:w-auto"
-                        onClick={handleBookCall}
-                      >
-                        Book Discovery Call
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
                     </div>
                   </div>
                 </div>
