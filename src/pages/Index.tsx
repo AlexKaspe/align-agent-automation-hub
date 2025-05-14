@@ -1,7 +1,7 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
+import FeatureSection from "@/components/FeatureSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SuccessStoriesSection from "@/components/SuccessStoriesSection";
@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Link, Check, Mail, BarChart3, Bot, Clock, CheckCircle, ArrowRight } from "lucide-react";
-import FeatureSection from "@/components/FeatureSection";
 
 const Index = () => {
   const handleBookCall = () => {
@@ -83,38 +82,8 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        {/* Services Section */}
-        <section id="services" className="py-16 pt-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Real Estate AI Automation Services That Actually Work</h2>
-              <p className="text-lg text-foreground/70">
-                Align Agents AI delivers automation systems built for realtors, brokers, and property managers. 
-                Automate lead generation, nurturing, communication, and backend operations.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-              {services.map((service, index) => (
-                <Card key={index} className="border border-border/50">
-                  <CardHeader>
-                    <service.icon className="h-8 w-8 text-primary mb-4" />
-                    <CardTitle>
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center space-x-2 text-sm text-foreground/70">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span>24/7 Availability</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Feature Section - Now replacing ServicesSection */}
+        <FeatureSection />
         
         {/* Comparison Section */}
         <ComparisonSection />
@@ -204,8 +173,6 @@ const Index = () => {
           </div>
         </section>
         
-        <ServicesSection />
-        
         <TestimonialsSection />
         
         {/* Case Studies Section */}
@@ -246,9 +213,6 @@ const Index = () => {
         </section>
         
         <SuccessStoriesSection />
-        
-        {/* Now FeatureSection is placed here, after SuccessStoriesSection */}
-        <FeatureSection />
         
         {/* Contact Section */}
         <ContactSection />
