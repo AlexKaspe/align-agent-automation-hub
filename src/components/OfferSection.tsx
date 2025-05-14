@@ -40,35 +40,35 @@ const OfferSection = () => {
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block">AI Lead Qualification Setup</span>
+                    <span className="font-semibold block">AI Lead Qualification Setup <span className="text-primary ml-1">$1,200</span></span>
                     <span className="text-sm text-foreground/70">Smart scoring & routing system that prioritizes high-converting leads</span>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block">Email Auto-Responder Suite</span>
+                    <span className="font-semibold block">Email Auto-Responder Suite <span className="text-primary ml-1">$950</span></span>
                     <span className="text-sm text-foreground/70">Automated AI email follow-ups that respond instantly and nurture over time</span>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block">CRM Integration & Sync</span>
+                    <span className="font-semibold block">CRM Integration & Sync <span className="text-primary ml-1">$1,100</span></span>
                     <span className="text-sm text-foreground/70">Seamless connection with your CRM for automated syncing & workflows</span>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block">Custom Reporting Dashboard</span>
+                    <span className="font-semibold block">Custom Reporting Dashboard <span className="text-primary ml-1">$1,000</span></span>
                     <span className="text-sm text-foreground/70">Real-time KPI dashboards to track leads, agents, and conversion performance</span>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block">Strategy & Training Call</span>
+                    <span className="font-semibold block">Strategy & Training Call <span className="text-primary ml-1">$500</span></span>
                     <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
                   </div>
                 </div>
