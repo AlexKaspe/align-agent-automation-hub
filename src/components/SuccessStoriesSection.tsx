@@ -3,7 +3,7 @@ import { Trophy, TrendingUp, Users } from 'lucide-react';
 
 const SuccessStoriesSection = () => {
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section id="success-stories" className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-30"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X, Calendar } from 'lucide-react';
 
@@ -11,45 +10,68 @@ const Navbar = () => {
     window.open('https://cal.com/alignagentsai/intro-call', '_blank');
   };
 
+  const scrollToSection = (id: string) => {
+    setIsMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100; // Adjust based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <header className="fixed w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-2">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setIsMenuOpen(false);
+              }}
+              className="flex items-center gap-2"
+            >
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent font-heading">
                 Align Agents AI
               </span>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:space-x-8">
-            <Link
-              to="/services"
+            <button
+              onClick={() => scrollToSection('services')}
               className="text-foreground/80 hover:text-primary transition-colors px-1 py-2 text-sm font-medium"
             >
               Services
-            </Link>
-            <Link
-              to="/pricing"
+            </button>
+            <button
+              onClick={() => scrollToSection('pricing')}
               className="text-foreground/80 hover:text-primary transition-colors px-1 py-2 text-sm font-medium"
             >
               Pricing
-            </Link>
-            <Link
-              to="/case-studies"
+            </button>
+            <button
+              onClick={() => scrollToSection('case-studies')}
               className="text-foreground/80 hover:text-primary transition-colors px-1 py-2 text-sm font-medium"
             >
               Case Studies
-            </Link>
-            <Link
-              to="/contact"
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
               className="text-foreground/80 hover:text-primary transition-colors px-1 py-2 text-sm font-medium"
             >
               Contact
-            </Link>
+            </button>
           </nav>
 
           {/* CTA Button */}
@@ -88,34 +110,30 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-b border-border/50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/services"
-              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
+            <button
+              onClick={() => scrollToSection('services')}
+              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary w-full text-left"
             >
               Services
-            </Link>
-            <Link
-              to="/pricing"
-              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              onClick={() => scrollToSection('pricing')}
+              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary w-full text-left"
             >
               Pricing
-            </Link>
-            <Link
-              to="/case-studies"
-              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              onClick={() => scrollToSection('case-studies')}
+              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary w-full text-left"
             >
               Case Studies
-            </Link>
-            <Link
-              to="/contact"
-              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary w-full text-left"
             >
               Contact
-            </Link>
+            </button>
             <div className="pt-2">
               <Button 
                 className="w-full font-medium"
