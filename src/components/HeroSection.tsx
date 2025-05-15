@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from './ui/button';
-import { Calendar } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
 
 const HeroSection = () => {
@@ -12,6 +12,21 @@ const HeroSection = () => {
     // Ensure the window was successfully opened
     if (win) {
       win.focus();
+    }
+  };
+
+  const scrollToServices = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      const headerOffset = 100; // Adjust based on your header height
+      const elementPosition = servicesSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -39,7 +54,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center sm:items-start gap-4 pt-6 animate-fade-in" style={{ animationDelay: '0.18s' }}>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-6 animate-fade-in" style={{ animationDelay: '0.18s' }}>
               <Button 
                 size="lg"
                 className="text-md font-medium px-8 py-6 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
@@ -51,6 +66,21 @@ const HeroSection = () => {
                 <span className="flex items-center justify-center w-full">
                   Book a Call
                   <Calendar className="ml-2 h-5 w-5" />
+                </span>
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-md font-medium px-8 py-6 text-lg border-primary/50 text-foreground hover:bg-primary/10 transition-all duration-300 w-full sm:w-auto"
+                onClick={scrollToServices}
+                role="link"
+                aria-label="Learn More"
+                type="button"
+              >
+                <span className="flex items-center justify-center w-full">
+                  Learn More
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </span>
               </Button>
             </div>
