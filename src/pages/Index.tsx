@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
@@ -83,7 +82,7 @@ const Index = () => {
         <HeroSection />
         
         {/* Services Section */}
-        <section id="services" className="py-16 pt-24 bg-background">
+        <section id="services" className="py-16 pt-24 bg-blue-900/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Estate AI Automation Services That Actually Work</h2>
@@ -116,10 +115,43 @@ const Index = () => {
         </section>
         
         {/* Comparison Section */}
-        <ComparisonSection />
+        <section id="comparison" className="py-20 relative overflow-hidden bg-blue-950/30">
+          <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: '0.12s' }}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Why Top Real Estate Agents Choose Align Agents AI
+              </h2>
+            </div>
+
+            <div className="max-w-4xl mx-auto animate-fade-in-soft" style={{ animationDelay: '0.22s' }}>
+              <div className="grid grid-cols-3 gap-4 p-6 rounded-lg bg-card border border-border/50">
+                <div className="font-semibold">Feature</div>
+                <div className="font-semibold text-center">Manual Workflows</div>
+                <div className="font-semibold text-center">Align Agents AI</div>
+                
+                {features.map((feature, index) => (
+                  <React.Fragment key={feature.label}>
+                    <div className="py-4 border-t border-border/30">
+                      {feature.label}
+                    </div>
+                    <div className="py-4 border-t border-border/30 text-center text-foreground/70">
+                      {feature.manual}
+                    </div>
+                    <div className="py-4 border-t border-border/30 text-center text-primary font-medium flex items-center justify-center gap-2">
+                      <Check className="w-4 h-4" />
+                      {feature.automated}
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* Pricing Section */}
-        <section id="pricing" className="py-16 bg-background relative overflow-hidden">
+        <section id="pricing" className="py-16 bg-blue-900/10 relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
@@ -204,12 +236,52 @@ const Index = () => {
         </section>
         
         {/* Feature Section */}
-        <FeatureSection />
+        <section id="features" className="py-20 relative overflow-hidden bg-blue-950/30">
+          <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
+          
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Key Features That Drive Results</h2>
+              <p className="text-lg text-foreground/70">
+                Our comprehensive suite of AI-powered tools designed specifically for real estate professionals
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={feature.title}
+                  className="relative group animate-fade-in-soft"
+                  style={{ animationDelay: `${0.15 + index * 0.09}s` }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                  <div className="relative bg-card border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                      <feature.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <p className="text-foreground/70">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         
-        <TestimonialsSection />
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-16 bg-blue-900/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">What Our Clients Are Saying</h2>
+              <p className="text-lg text-foreground/70">
+                Read success stories from real estate professionals who have transformed their businesses with Align Agents AI.
+              </p>
+            </div>
+          </div>
+        </section>
         
         {/* Case Studies Section */}
-        <section id="case-studies" className="py-16 bg-background">
+        <section id="case-studies" className="py-16 bg-blue-950/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Results. Real Agents. Real Growth.</h2>
@@ -245,10 +317,29 @@ const Index = () => {
           </div>
         </section>
         
-        <SuccessStoriesSection />
+        {/* Success Stories Section */}
+        <section id="success-stories" className="py-16 bg-blue-900/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Success Stories</h2>
+              <p className="text-lg text-foreground/70">
+                Explore how real estate agents are achieving remarkable results with our AI-powered automation solutions.
+              </p>
+            </div>
+          </div>
+        </section>
         
         {/* Contact Section */}
-        <ContactSection />
+        <section id="contact" className="py-16 bg-blue-950/30 relative overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+              <p className="text-lg text-foreground/70">
+                Ready to transform your real estate business with AI automation? Contact us today to learn more.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

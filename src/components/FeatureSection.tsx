@@ -36,7 +36,7 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 relative overflow-hidden">
+    <section id="features" className="py-20 relative overflow-hidden bg-blue-950/30">
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
