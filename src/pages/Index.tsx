@@ -1,3 +1,5 @@
+
+import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
@@ -114,41 +116,8 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Comparison Section */}
-        <section id="comparison" className="py-20 relative overflow-hidden bg-blue-950/30">
-          <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
-          
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: '0.12s' }}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Top Real Estate Agents Choose Align Agents AI
-              </h2>
-            </div>
-
-            <div className="max-w-4xl mx-auto animate-fade-in-soft" style={{ animationDelay: '0.22s' }}>
-              <div className="grid grid-cols-3 gap-4 p-6 rounded-lg bg-card border border-border/50">
-                <div className="font-semibold">Feature</div>
-                <div className="font-semibold text-center">Manual Workflows</div>
-                <div className="font-semibold text-center">Align Agents AI</div>
-                
-                {features.map((feature, index) => (
-                  <React.Fragment key={feature.label}>
-                    <div className="py-4 border-t border-border/30">
-                      {feature.label}
-                    </div>
-                    <div className="py-4 border-t border-border/30 text-center text-foreground/70">
-                      {feature.manual}
-                    </div>
-                    <div className="py-4 border-t border-border/30 text-center text-primary font-medium flex items-center justify-center gap-2">
-                      <Check className="w-4 h-4" />
-                      {feature.automated}
-                    </div>
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Comparison Section - Using the dedicated component */}
+        <ComparisonSection />
         
         {/* Pricing Section */}
         <section id="pricing" className="py-16 bg-blue-900/10 relative overflow-hidden">
@@ -235,38 +204,8 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Feature Section */}
-        <section id="features" className="py-20 relative overflow-hidden bg-blue-950/30">
-          <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
-          
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Key Features That Drive Results</h2>
-              <p className="text-lg text-foreground/70">
-                Our comprehensive suite of AI-powered tools designed specifically for real estate professionals
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={feature.title}
-                  className="relative group animate-fade-in-soft"
-                  style={{ animationDelay: `${0.15 + index * 0.09}s` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
-                  <div className="relative bg-card border border-border/50 rounded-lg p-6 hover:border-primary/50 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-foreground/70">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Feature Section - Using the dedicated component */}
+        <FeatureSection />
         
         {/* Testimonials Section */}
         <section id="testimonials" className="py-16 bg-blue-900/10">
