@@ -82,8 +82,8 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        {/* Services Section */}
-        <section id="services" className="py-16 pt-24 bg-background">
+        {/* Services Section - Lighter Blue Background */}
+        <section id="services" className="py-16 pt-24 bg-[#D3E4FD]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Estate AI Automation Services That Actually Work</h2>
@@ -115,18 +115,20 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Comparison Section */}
-        <ComparisonSection />
+        {/* Comparison Section - Darker Blue Background */}
+        <section className="bg-[#1EAEDB]">
+          <ComparisonSection />
+        </section>
         
-        {/* Pricing Section */}
-        <section id="pricing" className="py-16 bg-background relative overflow-hidden">
+        {/* Pricing Section - Lighter Blue Background */}
+        <section id="pricing" className="py-16 bg-[#D3E4FD] relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="bg-background border border-border/50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl max-w-5xl mx-auto">
+            <div className="bg-card border border-border/50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl max-w-5xl mx-auto">
               <div className="flex flex-col gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6">
@@ -203,13 +205,16 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Feature Section */}
+        {/* Feature Section - Darker Blue Background (Now moved below pricing) */}
         <FeatureSection />
         
-        <TestimonialsSection />
+        {/* Testimonials Section - Lighter Blue Background */}
+        <section className="bg-[#D3E4FD]">
+          <TestimonialsSection />
+        </section>
         
-        {/* Case Studies Section */}
-        <section id="case-studies" className="py-16 bg-background">
+        {/* Case Studies Section - Darker Blue Background */}
+        <section id="case-studies" className="py-16 bg-[#0FA0CE]/90">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Results. Real Agents. Real Growth.</h2>
@@ -245,10 +250,15 @@ const Index = () => {
           </div>
         </section>
         
-        <SuccessStoriesSection />
+        {/* Success Stories Section - Lighter Blue Background */}
+        <section className="bg-[#D3E4FD]">
+          <SuccessStoriesSection />
+        </section>
         
-        {/* Contact Section */}
-        <ContactSection />
+        {/* Contact Section - Darker Blue Background */}
+        <section className="bg-[#1EAEDB]">
+          <ContactSection />
+        </section>
       </main>
       <Footer />
     </div>
