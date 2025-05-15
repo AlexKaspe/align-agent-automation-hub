@@ -4,7 +4,7 @@ import { Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 relative overflow-hidden">
+    <section id="contact" className="py-16 bg-background relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
