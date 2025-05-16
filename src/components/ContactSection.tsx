@@ -1,14 +1,65 @@
 
+import React, { useState, FormEvent } from 'react';
 import { Button } from './ui/button';
 import { Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!formData.email || !formData.name || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Send email using mailto (basic solution)
+    const subject = encodeURIComponent(`Contact from ${formData.name} - ${formData.company}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage: ${formData.message}`);
+    window.location.href = `mailto:info@alignagentsai.com?subject=${subject}&body=${body}`;
+    
+    toast({
+      title: "Success",
+      description: "Your message has been sent!",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      message: ''
+    });
+  };
+
   return (
     <section id="contact" className="py-16 bg-background relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-heading">
@@ -21,30 +72,34 @@ const ContactSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Contact form */}
-            <div className="bg-card border border-border/50 rounded-xl p-6 shadow-md">
+            <div className="bg-card border border-border/50 rounded-xl p-6 shadow-md relative z-20">
               <h3 className="text-xl font-bold mb-4 font-heading">Send us a message</h3>
-              <form id="contact-form" className="space-y-4">
+              <form id="contact-form" className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1">
                       Name
                     </label>
-                    <input
+                    <Input
                       type="text"
                       id="name"
-                      className="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Your name"
+                      className="w-full"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-1">
                       Email
                     </label>
-                    <input
+                    <Input
                       type="email"
                       id="email"
-                      className="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Your email"
+                      className="w-full"
                     />
                   </div>
                 </div>
@@ -52,23 +107,27 @@ const ContactSection = () => {
                   <label htmlFor="company" className="block text-sm font-medium mb-1">
                     Company
                   </label>
-                  <input
+                  <Input
                     type="text"
                     id="company"
-                    className="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                    value={formData.company}
+                    onChange={handleChange}
                     placeholder="Your company"
+                    className="w-full"
                   />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1">
                     Message
                   </label>
-                  <textarea
+                  <Textarea
                     id="message"
                     rows={4}
-                    className="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="How can we help you?"
-                  ></textarea>
+                    className="w-full"
+                  />
                 </div>
                 <Button type="submit" className="w-full">
                   Send Message
