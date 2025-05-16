@@ -25,8 +25,7 @@ const ContactSection = () => {
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Error",
+      toast("Error", {
         description: "Please fill in all required fields",
         variant: "destructive"
       });
@@ -36,8 +35,7 @@ const ContactSection = () => {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Error",
+      toast("Error", {
         description: "Please enter a valid email address",
         variant: "destructive"
       });
@@ -64,14 +62,12 @@ const ContactSection = () => {
       });
 
       // Show success message
-      toast({
-        title: "Success!",
-        description: "Your message was prepared for sending. If your email client didn't open automatically, please contact us directly.",
+      toast("Success!", {
+        description: "Your message was prepared for sending. If your email client didn't open automatically, please contact us directly."
       });
     } catch (error) {
       console.error('Error sending message:', error);
-      toast({
-        title: "Error",
+      toast("Error", {
         description: "Failed to send the message. Please try again.",
         variant: "destructive"
       });
