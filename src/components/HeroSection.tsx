@@ -5,18 +5,12 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import ParallaxSection from './ParallaxSection';
 
 const HeroSection = () => {
-  const handleBookCall = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const handleBookCall = () => {
     // Use a more reliable approach for opening links
-    const win = window.open('https://cal.com/alignagentsai/intro-call', '_blank', 'noopener,noreferrer');
-    // Ensure the window was successfully opened
-    if (win) {
-      win.focus();
-    }
+    window.open('https://cal.com/alignagentsai/intro-call', '_blank', 'noopener,noreferrer');
   };
 
-  const scrollToServices = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
       const headerOffset = 100; // Adjust based on your header height
@@ -43,7 +37,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left content */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 relative z-10">
             {/* Subtle fade-in from bottom */}
             <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.05s' }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -57,11 +51,9 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-6 animate-fade-in" style={{ animationDelay: '0.18s' }}>
               <Button 
                 size="lg"
-                className="text-md font-medium px-8 py-6 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+                className="text-md font-medium px-8 py-6 text-lg bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto relative z-10 pointer-events-auto"
                 onClick={handleBookCall}
-                role="link"
-                aria-label="Book a Call"
-                type="button" // Explicitly set button type
+                type="button"
               >
                 <span className="flex items-center justify-center w-full">
                   Book a Call
@@ -72,10 +64,8 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-md font-medium px-8 py-6 text-lg border-primary/50 text-foreground hover:bg-primary/10 transition-all duration-300 w-full sm:w-auto"
+                className="text-md font-medium px-8 py-6 text-lg border-primary/50 text-foreground hover:bg-primary/10 transition-all duration-300 w-full sm:w-auto relative z-10 pointer-events-auto"
                 onClick={scrollToServices}
-                role="link"
-                aria-label="Learn More"
                 type="button"
               >
                 <span className="flex items-center justify-center w-full">
@@ -97,8 +87,8 @@ const HeroSection = () => {
                   className="w-full h-full object-cover object-center mix-blend-luminosity opacity-90"
                 />
                 
-                {/* Floating elements (flying tabs) */}
-                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float">
+                {/* Floating elements (flying tabs) - ensuring they don't block clicks */}
+                <div className="absolute top-1/4 -left-10 sm:left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float pointer-events-none">
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>
@@ -109,7 +99,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.3s'}}>
+                <div className="absolute top-1/2 -right-10 sm:right-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float pointer-events-none" style={{animationDelay: '0.3s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
@@ -120,7 +110,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.5s'}}>
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float pointer-events-none" style={{animationDelay: '0.5s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-primary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-primary to-primary/60 rounded-full"></div>
@@ -131,8 +121,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                {/* Moved Performance Analytics tab to bottom left */}
-                <div className="absolute bottom-10 left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float" style={{animationDelay: '0.7s'}}>
+                <div className="absolute bottom-10 left-5 max-w-[180px] bg-card/90 backdrop-blur rounded-lg p-3 border border-border/30 text-sm font-medium shadow-lg animate-card-pop animate-float pointer-events-none" style={{animationDelay: '0.7s'}}>
                   <div className="flex items-center gap-2">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <div className="h-5 w-5 bg-gradient-to-br from-secondary to-secondary/60 rounded-full"></div>
@@ -144,8 +133,8 @@ const HeroSection = () => {
                 </div>
 
                 {/* Gradient overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </ParallaxSection>
           </div>
