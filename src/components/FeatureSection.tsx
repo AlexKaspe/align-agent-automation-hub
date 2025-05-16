@@ -44,7 +44,7 @@ const FeatureSection = () => {
       <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-secondary/10 blur-[100px]"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <ParallaxSection speed={0.1} className="mb-16">
+        <ParallaxSection speed={0.07} delay={0.35} threshold={0.15} className="mb-16">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block mb-3">
               <span className="px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">

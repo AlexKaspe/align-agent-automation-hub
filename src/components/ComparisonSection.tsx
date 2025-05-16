@@ -41,7 +41,7 @@ const ComparisonSection = () => {
       <div className="absolute -bottom-40 right-1/4 w-96 h-96 rounded-full bg-secondary/10 blur-[100px]"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <ParallaxSection speed={0.12} className="mb-16">
+        <ParallaxSection speed={0.08} delay={0.3} threshold={0.2} className="mb-16">
           <div className="text-center max-w-3xl mx-auto animate-fade-in">
             <div className="inline-block mb-3">
               <span className="px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">

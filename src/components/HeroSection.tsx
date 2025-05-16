@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { Calendar, ArrowRight, ChevronDown } from 'lucide-react';
@@ -109,8 +108,8 @@ const HeroSection = () => {
 
           {/* Right content */}
           <div className="lg:col-span-6 relative">
-            {/* Parallax section with enhanced visuals */}
-            <ParallaxSection speed={0.15} className="relative">
+            {/* Adjusted parallax for hero section */}
+            <ParallaxSection speed={0.04} delay={0.1} threshold={0.05} className="relative">
               <div className={`relative rounded-2xl overflow-hidden aspect-[4/3] transition-all duration-1000 ease-out delay-150 ${isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-16 translate-y-8'}`}>
                 {/* Glass card effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-card/80 via-card/70 to-card/50 backdrop-blur-sm border border-border/30 shadow-2xl z-10"></div>
