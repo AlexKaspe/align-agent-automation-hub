@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Twitter, Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
-import { toast } from './ui/sonner';
+import { toast } from './ui/use-toast';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 
@@ -25,7 +25,7 @@ const ContactSection = () => {
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
-      toast("Error", {
+      toast({
         description: "Please fill in all required fields",
         variant: "destructive"
       });
@@ -35,7 +35,7 @@ const ContactSection = () => {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      toast("Error", {
+      toast({
         description: "Please enter a valid email address",
         variant: "destructive"
       });
@@ -62,12 +62,12 @@ const ContactSection = () => {
       });
 
       // Show success message
-      toast("Success!", {
+      toast({
         description: "Your message was prepared for sending. If your email client didn't open automatically, please contact us directly."
       });
     } catch (error) {
       console.error('Error sending message:', error);
-      toast("Error", {
+      toast({
         description: "Failed to send the message. Please try again.",
         variant: "destructive"
       });
