@@ -1,5 +1,4 @@
 
-import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
@@ -84,7 +83,7 @@ const Index = () => {
         <HeroSection />
         
         {/* Services Section */}
-        <section id="services" className="py-16 pt-24 bg-blue-900/10">
+        <section id="services" className="py-16 pt-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Estate AI Automation Services That Actually Work</h2>
@@ -116,11 +115,11 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Comparison Section - Using the dedicated component */}
+        {/* Comparison Section */}
         <ComparisonSection />
         
         {/* Pricing Section */}
-        <section id="pricing" className="py-16 bg-blue-900/10 relative overflow-hidden">
+        <section id="pricing" className="py-16 bg-background relative overflow-hidden">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
@@ -204,23 +203,13 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Feature Section - Using the dedicated component */}
+        {/* Feature Section */}
         <FeatureSection />
         
-        {/* Testimonials Section */}
-        <section id="testimonials" className="py-16 bg-blue-900/10">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">What Our Clients Are Saying</h2>
-              <p className="text-lg text-foreground/70">
-                Read success stories from real estate professionals who have transformed their businesses with Align Agents AI.
-              </p>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection />
         
         {/* Case Studies Section */}
-        <section id="case-studies" className="py-16 bg-blue-950/30">
+        <section id="case-studies" className="py-16 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Real Results. Real Agents. Real Growth.</h2>
@@ -256,29 +245,10 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Success Stories Section */}
-        <section id="success-stories" className="py-16 bg-blue-900/10">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Success Stories</h2>
-              <p className="text-lg text-foreground/70">
-                Explore how real estate agents are achieving remarkable results with our AI-powered automation solutions.
-              </p>
-            </div>
-          </div>
-        </section>
+        <SuccessStoriesSection />
         
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-blue-950/30 relative overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-              <p className="text-lg text-foreground/70">
-                Ready to transform your real estate business with AI automation? Contact us today to learn more.
-              </p>
-            </div>
-          </div>
-        </section>
+        <ContactSection />
       </main>
       <Footer />
     </div>
