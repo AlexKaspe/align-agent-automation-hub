@@ -108,6 +108,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Your name"
+                      className="w-full"
                       required
                     />
                   </div>
@@ -121,6 +122,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Your email"
+                      className="w-full"
                       required
                     />
                   </div>
@@ -135,6 +137,7 @@ const ContactSection = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     placeholder="Your company"
+                    className="w-full"
                   />
                 </div>
                 <div>
@@ -147,10 +150,15 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="How can we help you?"
+                    className="w-full"
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full" disabled={isLoading}>
+                <Button 
+                  type="submit" 
+                  className="w-full" 
+                  disabled={isLoading}
+                >
                   {isLoading ? (
                     <span className="flex items-center gap-2">
                       <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
