@@ -5,9 +5,11 @@ import { Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +25,7 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!formData.email || !formData.name || !formData.message) {
@@ -34,24 +36,49 @@ const ContactSection = () => {
       });
       return;
     }
+    
+    setIsSubmitting(true);
 
-    // Send email using mailto (basic solution)
-    const subject = encodeURIComponent(`Contact from ${formData.name} - ${formData.company}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage: ${formData.message}`);
-    window.location.href = `mailto:info@alignagentsai.com?subject=${subject}&body=${body}`;
+    // EmailJS service configuration
+    // Note: You need to create an account on EmailJS and set up a service
+    // You'll need to replace these IDs with your actual EmailJS IDs
+    const serviceId = "service_id"; // Replace with your EmailJS service ID
+    const templateId = "template_id"; // Replace with your EmailJS template ID
+    const userId = "user_id"; // Replace with your EmailJS user ID
     
-    toast({
-      title: "Success",
-      description: "Your message has been sent!",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    });
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        to_email: "jane@alignagents.co"
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
+      toast({
+        title: "Success",
+        description: "Your message has been sent! We'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -87,6 +114,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       placeholder="Your name"
                       className="w-full"
+                      required
                     />
                   </div>
                   <div>
@@ -100,6 +128,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       placeholder="Your email"
                       className="w-full"
+                      required
                     />
                   </div>
                 </div>
@@ -127,10 +156,11 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full"
+                    required
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
