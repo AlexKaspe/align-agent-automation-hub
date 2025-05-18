@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -166,11 +165,12 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-pattern": "url('/lovable-uploads/591b505e-0653-419d-ba1c-54983f3d5dd9.png')",
-        "grid-pattern": "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
+        "hero-pattern":
+          "url('/lovable-uploads/591b505e-0653-419d-ba1c-54983f3d5dd9.png')",
+        "grid-pattern":
+          "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
