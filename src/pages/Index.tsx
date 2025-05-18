@@ -10,7 +10,6 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Button } from "@/components/ui/button";
 import { Calendar, Link, Check, Mail, BarChart3, Bot, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import FeatureSection from "@/components/FeatureSection";
-import LogoCarousel from "@/components/LogoCarousel";
 
 const Index = () => {
   const handleBookCall = () => {
@@ -57,9 +56,6 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        {/* Logo Carousel Section */}
-        <LogoCarousel />
-        
         {/* Services Section */}
         <section id="services" className="py-16 pt-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,12 +69,9 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               {services.map((service, index) => (
-                <Card 
-                  key={index} 
-                  className="border border-border/50 hover-lift group bg-white hover:shadow-lg transition-all duration-300"
-                >
+                <Card key={index} className="border border-border/50">
                   <CardHeader>
-                    <service.icon className="h-8 w-8 text-primary mb-4 group-hover:text-primary/80 transition-colors" />
+                    <service.icon className="h-8 w-8 text-primary mb-4" />
                     <CardTitle>
                       {service.title}
                     </CardTitle>
@@ -107,7 +100,7 @@ const Index = () => {
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="bg-white border border-border/50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl max-w-5xl mx-auto hover-lift">
+            <div className="bg-background border border-border/50 rounded-2xl p-8 md:p-10 lg:p-12 shadow-xl max-w-5xl mx-auto">
               <div className="flex flex-col gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6">
@@ -163,24 +156,18 @@ const Index = () => {
                         <span className="text-sm text-foreground/70">Personalized training session + playbook to get your team onboarded fast</span>
                       </div>
                     </div>
-                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 transition-all hover:shadow-lg duration-300 hover:border-primary/30">
+                    <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
                       <div className="flex flex-col gap-2">
                         <p className="font-medium">Total Value: <span className="line-through text-foreground/60">$5,750</span></p>
                         <p className="text-lg font-bold">Your Price: <span className="text-primary">$4,500</span> — Save $1,250 when bundled</p>
-                        <div className="relative group">
-                          <Button 
-                            size="lg" 
-                            className="font-medium mt-2 w-full relative overflow-hidden z-10 group"
-                            onClick={handleBookCall}
-                          >
-                            <span className="absolute inset-0 w-0 bg-white/20 group-hover:w-full transition-all duration-500 ease-out"></span>
-                            <span className="relative z-10 flex items-center justify-center">
-                              Book Discovery Call
-                              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </span>
-                          </Button>
-                          <span className="absolute -inset-1 rounded-lg bg-primary/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></span>
-                        </div>
+                        <Button 
+                          size="lg" 
+                          className="font-medium mt-2"
+                          onClick={handleBookCall}
+                        >
+                          Book Discovery Call
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
                       </div>
                     </div>
                   </div>

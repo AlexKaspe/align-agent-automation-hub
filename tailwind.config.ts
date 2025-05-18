@@ -151,39 +151,6 @@ export default {
             transform: "translateY(-10px)",
           },
         },
-        "mouse-scroll": {
-          "0%": { transform: "translateY(0)" },
-          "30%": { transform: "translateY(10px)" },
-          "100%": { transform: "translateY(0)" }
-        },
-        "text-reveal": {
-          "0%": { 
-            transform: "translateY(100%)", 
-            opacity: "0" 
-          },
-          "100%": { 
-            transform: "translateY(0)", 
-            opacity: "1" 
-          }
-        },
-        "blur-in": {
-          "0%": { 
-            filter: "blur(12px)",
-            opacity: "0" 
-          },
-          "100%": { 
-            filter: "blur(0)",
-            opacity: "1" 
-          }
-        },
-        "logo-scroll": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-250px * 5))" }
-        },
-        "magnetic-move": {
-          "0%, 100%": { transform: "translate(0px, 0px)" },
-          "50%": { transform: "translate(var(--x, 0px), var(--y, 0px))" }
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -195,11 +162,6 @@ export default {
         "card-pop": "card-pop 0.9s cubic-bezier(0.33, 1, 0.68, 1) both",
         "pulse-light": "pulse-light 3s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
-        "mouse-scroll": "mouse-scroll 2.5s ease-in-out infinite",
-        "text-reveal": "text-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "blur-in": "blur-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "logo-scroll": "logo-scroll 25s linear infinite",
-        "magnetic-move": "magnetic-move 0.3s linear",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
