@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 220 26% 14%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 215 30% 22%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 220 26% 14%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 41 100% 50%;
-    --primary-foreground: 220 26% 14%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 226 100% 96%;
-    --secondary-foreground: 220 26% 14%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 215 30% 22%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 215 30% 22%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
-    --ring: 41 100% 50%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
@@ -101,5 +101,90 @@
 
   html {
     scroll-behavior: smooth;
+    cursor: default;
+  }
+}
+
+@layer utilities {
+  .clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-primary to-blue-400 clip-text text-transparent;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+    transform: translateY(0);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
+  
+  .reveal-text {
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .reveal-text > span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: text-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(0.1s * var(--index, 0));
+  }
+
+  /* Logo Slider */
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: logo-scroll 25s linear infinite;
+    white-space: nowrap;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  .logos-slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 }
