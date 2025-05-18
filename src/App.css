@@ -42,3 +42,29 @@
   color: #64748b;
 }
 
+/* Gold accent elements */
+.gold-accent {
+  color: hsl(42, 85%, 65%);
+}
+
+.gold-bg {
+  background-color: hsl(42, 85%, 65%);
+}
+
+.gold-border {
+  border-color: hsl(42, 85%, 65%);
+}
+
+/* Blue primary elements with more vibrance */
+.blue-primary {
+  color: hsl(212, 72%, 45%);
+}
+
+.blue-bg {
+  background-color: hsl(212, 72%, 45%);
+}
+
+.blue-border {
+  border-color: hsl(212, 72%, 45%);
+}
+
