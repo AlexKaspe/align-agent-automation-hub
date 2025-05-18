@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,11 +28,6 @@ export default {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        gold: {
-          DEFAULT: 'hsl(42, 85%, 65%)',
-          light: 'hsl(42, 85%, 75%)',
-          dark: 'hsl(42, 75%, 55%)'
-        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
@@ -174,9 +168,7 @@ export default {
         "hero-pattern":
           "url('/lovable-uploads/591b505e-0653-419d-ba1c-54983f3d5dd9.png')",
         "grid-pattern":
-          "linear-gradient(rgba(33, 133, 208, 0.1) 1px, transparent 1px), linear-gradient(to right, rgba(33, 133, 208, 0.1) 1px, transparent 1px)",
-        "blue-gold-gradient": "linear-gradient(to right, hsl(212, 72%, 45%), hsl(42, 85%, 65%))",
-        "gold-accent": "linear-gradient(to right, hsl(42, 85%, 65%), hsl(42, 75%, 60%))",
+          "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
       },
     },
   },
